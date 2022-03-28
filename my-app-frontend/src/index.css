@@ -1,0 +1,235 @@
+nav.navbar a {
+  padding: 10px;
+  font-size: 20px;
+  color: #f3f3f3;
+  text-decoration: none;
+}
+
+.navbar a:active {
+  text-decoration: underline;
+}
+
+.navbar-header {
+  text-align: center;
+  justify-content: space-between;
+  background-color: #94abbd;
+  padding: 20px;
+}
+
+.movie-list-header {
+  text-align: center;
+
+}
+
+.house-card img {
+  max-width: 490px;
+  height: 340px;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.house-card h3, p {
+  padding-left: 20px;
+}
+
+.house-card h3 {
+  padding-top: 5px;
+}
+
+.house-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 500px;
+  background-color: #f3f3f3;
+  border-radius: 25px;
+}
+
+.movies-container .house-card {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.movies-container .house-card:hover {
+  box-shadow: 0 10px 20px 16px rgba(0,0,0,.5);
+}
+
+.movies-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+  columns: 2;
+  padding-bottom: 30px;
+}
+
+.travel-container {
+  display: flex;
+  justify-content: center;
+}
+
+.travel-container .house-card{
+  transition: 0.3s;
+  width: 310px;
+  float: none;
+  margin-right: 10px;
+}
+
+.travel-container .house-card img {
+  max-width: 300px;
+  height: 200px;
+}
+
+.movie-form {
+  vertical-align: middle;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: inset rgb(0, 0, 120);
+  border-width: 2px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+ 
+input[type=submit] {
+  width: 100%;
+  background-color: #556e84;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+}
+
+input[type=submit]:hover {
+  background-color: #3c83b3;
+}
+
+.form-labels {
+  font-size: large;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: #fef68a;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save {
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.save:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.note {
+  background-color: #fef68a;
+  border-radius: 25px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.travel-card-container {
+  display: flex;
+  float: left;
+  padding: 10px;
+  margin: 5px;
+  border-style: solid;
+  border-color: rgb(0, 0, 120);
+  border-radius: 25px;
+}
+
+.travel-container {
+  flex-wrap: wrap;
+}
+
+.favorite-icon {
+  color: blue;
+}
+
+.App {
+  background-color: #94abbd;
+  height: auto;
+
+}
+
+.travel-list, .add-a-movie {
+  height: 500vh;
+  background-color: #94abbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.movie-form {
+  padding: 30px;
+}
+
+.movie-form-header, .travel-list-header {
+  text-align: center;
+}
+
+.welcome-description, .movie-form-description, .travel-list-description {
+  padding: 15px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #6f5a51;
+  padding: 20px;
+  color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.list-item {
+  list-style-type: none;
+}
+
+.our-logo {
+  display: flex;
+  align-items: center;
+  font-size: 30px
+}
+
+.list-item {
+  font-size: 20px;
+  color: #fff;
+}
