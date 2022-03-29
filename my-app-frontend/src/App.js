@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import AddAHouse from "./AddAHouse";
 import TravelList from "./TravelList";
@@ -57,12 +57,12 @@ function App() {
     
   return (
       <div className="App">
-          <NavBar />
-          {/* <Switch> */}
-              {/* <Route path="/addamovie"> */}
+          {/* <NavBar />
+          <Switch> */}
+              {/* <Route path="/addahouse"> */}
                   <AddAHouse houses={houses} setHouses={setHouses} handleAddHouse={handleAddHouse} />
-              {/* </Route>
-              <Route path="/travellist"> */}
+              {/* </Route> */}
+              {/* <Route path="/travellist"> */}
                   <TravelList 
                     travel={travel}
                     // if we want to put patch in for Save Click below
@@ -70,15 +70,15 @@ function App() {
                     newComment={newComment}
                     // saveComment={saveComment}
                   />
-              {/* </Route>
-              <Route exact path="/"> */}
+              {/* </Route> */}
+              {/* <Route path="/"> */}
                   <HouseList 
                     houses={houses}
                     handleClickHouse={handleClickHouse}
             
                   />
-              {/* </Route>
-          </Switch> */}
+              {/* </Route> */}
+          {/* </Switch> */}
           <div className="footer">
               
               <div className="our-logo">

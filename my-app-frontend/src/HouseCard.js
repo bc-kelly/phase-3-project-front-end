@@ -15,6 +15,14 @@ function HouseCard ({house, handleClickHouse}) {
             <h3>{house.location}</h3>
             <img src={house.image} alt={house.name} />
             <p>{house.description}</p>
+            <div className='house-card-footer'> 
+                <button className='save'>
+                    Add review
+                </button>
+                <button className='book'>
+                    Book
+                </button>
+            </div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddReview({ handleSaveClick, review, newComment}) {
+function Reviews({ handleSaveClick, review, newComment}) {
     const [reviewText, setReviewText] = []
 	const characterLimit = 200;
 
@@ -49,4 +49,4 @@ function AddReview({ handleSaveClick, review, newComment}) {
     );
 }
 
-export default AddReview;
+export default Reviews;
