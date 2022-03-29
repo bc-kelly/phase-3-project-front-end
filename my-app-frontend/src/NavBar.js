@@ -6,13 +6,13 @@ function NavBar() {
         <nav className="navbar">
             <div className="navbar-header">
                 <div>
-                    {/* <NavLink exact to="/">Movie Trotter</NavLink> */}
+                    <NavLink exact to="/">Air BnB But Betta</NavLink>
                 </div>
                 <div>
-                    {/* <NavLink activeStyle={{textDecoration:"underline"}} exact to="/">| House List |</NavLink>
-                    <NavLink activeStyle={{textDecoration:"underline"}} to="/addahouse">| Add a House |</NavLink>
-                    <NavLink activeStyle={{textDecoration:"underline"}} to="/travellist">| Travel Log |</NavLink> */}
-                </div>
+                    <NavLink activeStyle={{textDecoration:"underline"}} exact to="/">| Home |</NavLink>
+                    <NavLink activeStyle={{textDecoration:"underline"}} to="/addahouse">| Post a Stay |</NavLink>
+                    <NavLink activeStyle={{textDecoration:"underline"}} to="/travellist">| Post a Review |</NavLink>
+             </div>
             </div>
         </nav>
     );
