@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
-function AddNote({ handleSaveClick, movie, newComment}) {
-    const [noteText, setNoteText] = useState(movie.comment);
+function AddReview({ handleSaveClick, review, newComment}) {
+    const [reviewText, setReviewText] = []
 	const characterLimit = 200;
 
 	function handleChange(event){
 		if (characterLimit - event.target.value.length >= 0) {
-			setNoteText(event.target.value);
+			setReviewText(event.target.value);
 		}
 	}
 
 	function saveClick() {
-        handleSaveClick(movie, noteText);
+        handleSaveClick(reviewText);
 	}
 
     function clickFavorite(event) {
@@ -23,23 +23,25 @@ function AddNote({ handleSaveClick, movie, newComment}) {
     }
 
     return (
-        <div className='note'>
-            <div className="note-header">
+        <div className='review'>
+            <div className="review-header">
                 <textarea
                     rows='8'
                     cols='25'
-                    placeholder='Type to add a note...'
-                    value={noteText}
+                    placeholder='Type to add a review...'
+                    value={reviewText}
                     onChange={handleChange}
-                >{movie.comment}
+                >{review.content}
                 </textarea>
                 <div className="favorite-icon" onClick={clickFavorite}>{"\u2606"}</div>
             </div>
-            <div className='note-footer'>
+            <div className='review-footer'>
                 <small>
-                    {characterLimit - noteText.length} Remaining
+                    {/* {characterLimit - reviewText.length} Remaining */}
                 </small>
-                <button className='save' onClick={saveClick}>
+                <button className='save' 
+                onClick={saveClick}
+                >
                     Save
                 </button>
             </div>
@@ -47,4 +49,4 @@ function AddNote({ handleSaveClick, movie, newComment}) {
     );
 }
 
-export default AddNote;
+export default AddReview;

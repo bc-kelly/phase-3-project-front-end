@@ -16,7 +16,7 @@ nav.navbar a {
   padding: 20px;
 }
 
-.movie-list-header {
+.house-list-header {
   text-align: center;
 
 }
@@ -44,16 +44,16 @@ nav.navbar a {
   border-radius: 25px;
 }
 
-.movies-container .house-card {
+.houses-container .house-card {
   margin: 10px;
   cursor: pointer;
 }
 
-.movies-container .house-card:hover {
+.houses-container .house-card:hover {
   box-shadow: 0 10px 20px 16px rgba(0,0,0,.5);
 }
 
-.movies-container {
+.houses-container {
   display: flex;
   justify-content: center;
   margin: auto;
@@ -79,7 +79,7 @@ nav.navbar a {
   height: 200px;
 }
 
-.movie-form {
+.house-form {
   vertical-align: middle;
 }
 
@@ -140,7 +140,7 @@ textarea:focus {
   cursor: pointer;
 }
 
-.note {
+.review {
   background-color: #fef68a;
   border-radius: 25px;
   padding: 1rem;
@@ -151,12 +151,12 @@ textarea:focus {
   white-space: pre-wrap;
 }
 
-.note-header {
+.review-header {
   display: flex;
   justify-content: space-between;
 }
 
-.note-footer {
+.review-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -186,7 +186,7 @@ textarea:focus {
 
 }
 
-.travel-list, .add-a-movie {
+.travel-list, .add-a-house {
   height: 500vh;
   background-color: #94abbd;
 }
@@ -196,15 +196,15 @@ textarea:focus {
   padding: 0;
 }
 
-.movie-form {
+.house-form {
   padding: 30px;
 }
 
-.movie-form-header, .travel-list-header {
+.house-form-header, .travel-list-header {
   text-align: center;
 }
 
-.welcome-description, .movie-form-description, .travel-list-description {
+.welcome-description, .house-form-description, .travel-list-description {
   padding: 15px;
   padding-bottom: 35px;
   text-align: center;

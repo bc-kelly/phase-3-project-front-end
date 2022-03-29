@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-function AddAMovie({ onAddMovie}) {
+function AddAHouse({ handleAddHouse}) {
     const [errorMessage, setErrorMessage] = useState('');
     const [formData, setFormData] = useState ({
-        name: "",
+        description: "",
         image: "",
         location: ""
     });
@@ -21,42 +21,42 @@ function AddAMovie({ onAddMovie}) {
         if(formData.name === "") {
           setErrorMessage('Error! Complete All Fields');
           setFormData({
-            name: "",
+            description: "",
             image: "",
             location: ""
         })
         } else if (formData.image === "") {
             setErrorMessage('Error! Complete All Fields');
             setFormData({
-                name: "",
+                description: "",
                 image: "",
                 location: ""
             })
         } else if (formData.location === "") {
             setErrorMessage('Error! Complete All Fields');
             setFormData({
-                name: "",
+                description: "",
                 image: "",
                 location: ""
             })
         } else {
             
-        fetch('http://localhost:3000/movies', {
+        fetch('http://localhost:9292/houses', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name: formData.name,
+            description: formData.description,
             image: formData.image,
             location: formData.location
           }),
         })
         .then(resp => resp.json())
-        .then((newMovie) => onAddMovie(newMovie))
+        .then((newHouse) => handleAddHouse(newHouse))
 
         setFormData({
-            name: "",
+            description: "",
             image: "",
             location: ""
         })
@@ -65,28 +65,28 @@ function AddAMovie({ onAddMovie}) {
     }
 
     return (
-        <div className="add-a-movie">
-          <h1 className="movie-form-header">Add Your Own Movie/Travel Inspo</h1>
-          <h3 className="movie-form-description">
-            Build your own movie card below! 
+        <div className="add-a-house">
+          <h1 className="house-form-header">Add Your Own House</h1>
+          <h3 className="house-form-description">
+            Add a stay below! 
           </h3>
           {errorMessage && (
             <p className="error"> {errorMessage} </p>
           )}
-        <form className="movie-form" onSubmit={handleSubmit}> 
+        <form className="house-form" onSubmit={handleSubmit}> 
         <label className="form-labels">
-          Movie Title:
+          Description:
           <input
             className="capitalize"
             type="text"
-            name="name"
-            placeholder="Add Title..."
-            value={formData.name}
+            name="description"
+            placeholder="Add Description..."
+            value={formData.description}
             onChange={handleChange}
           />
         </label>
         <label className="form-labels">
-          Location Image:
+          Image:
           <input
             className="capitalize"
             type="text"
@@ -97,7 +97,7 @@ function AddAMovie({ onAddMovie}) {
           />
         </label>
         <label className="form-labels">
-          Movie Location:
+          Location:
           <input
             className="capitalize"
             type="text"
@@ -113,4 +113,4 @@ function AddAMovie({ onAddMovie}) {
     )
 }
 
-export default AddAMovie;
+export default AddAHouse

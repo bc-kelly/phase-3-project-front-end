@@ -1,81 +1,89 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+// import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
-import AddAMovie from "./AddAMovie";
+import AddAHouse from "./AddAHouse";
 import TravelList from "./TravelList";
 import HouseList from "./HouseList";
 import "./index.css";
-import { FcGlobe } from "react-icons/fc";
+// import { FcGlobe } from "react-icons/fc";
 
 function App() {
-    const [movies, setMovies] = useState([]);
+    const [houses, setHouses] = useState([]);
     const [travel, setTravel] = useState ([]);
     const [newComment, setNewComment] = useState ('');
 
-    
-
     useEffect (() => {
-        fetch('http://localhost:3000/movies')
+        fetch('http://localhost:9292/houses')
         .then(resp => resp.json())
-        .then(movieData => {
-            setMovies(movieData);
+        .then(houseData => {
+            setHouses(houseData);
         })
     }, []);
 
 
+    useEffect (() => {
+        fetch('http://localhost:9292/reviews')
+        .then(resp => resp.json())
+        .then(reviewData => {
+            console.log(reviewData);
+            setTravel(reviewData);
+        })
+    }, []);
 
-    function handleAddMovie (newMovie) {
-        setMovies([...movies, newMovie])
+
+    function handleAddHouse (newHouse) {
+        setHouses([...houses, newHouse])
     }
    
-    // //PATCH HERE WHEN USER CLICKS SAVE
-    function handleSaveClick(updatedMovie, savedComment) {
-        console.log(updatedMovie)
-        fetch(`http://localhost:3000/movies/${updatedMovie.id}`, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({"comment": savedComment})
-        })
-                updatedMovie.comment = savedComment;
-                // setNewComment(savedComment)
-    }
+    // // //PATCH HERE WHEN USER CLICKS SAVE
+    // function handleSaveClick(updatedMovie, savedComment) {
+    //     console.log(updatedMovie)
+    //     fetch(`http://localhost:3000/houses/${updatedMovie.id}`, {
+    //         method: "PATCH",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({"comment": savedComment})
+    //     })
+    //             updatedMovie.comment = savedComment;
+    //             // setNewComment(savedComment)
+    // }
 
-    function handleClickMovie(clickedMovie) {
-        if (!travel.includes(clickedMovie)) {
-        setTravel([...travel, clickedMovie]);
+    function handleClickHouse(clickedHouse) {
+        if (!travel.includes(clickedHouse)) {
+        setTravel([...travel, clickedHouse]);
         }
     }
     
   return (
       <div className="App">
           <NavBar />
-          <Switch>
-              <Route path="/addamovie">
-                  <AddAMovie movies={movies} setMovies={setMovies} onAddMovie={handleAddMovie} />
-              </Route>
-              <Route path="/travellist">
+          {/* <Switch> */}
+              {/* <Route path="/addamovie"> */}
+                  <AddAHouse houses={houses} setHouses={setHouses} handleAddHouse={handleAddHouse} />
+              {/* </Route>
+              <Route path="/travellist"> */}
                   <TravelList 
                     travel={travel}
-                    handleSaveClick={handleSaveClick}
+                    // if we want to put patch in for Save Click below
+                    // handleSaveClick={handleSaveClick}
                     newComment={newComment}
                     // saveComment={saveComment}
                   />
-              </Route>
-              <Route exact path="/">
+              {/* </Route>
+              <Route exact path="/"> */}
                   <HouseList 
-                    movies={movies}
-                    handleClickMovie={handleClickMovie}
+                    houses={houses}
+                    handleClickHouse={handleClickHouse}
             
                   />
-              </Route>
-          </Switch>
+              {/* </Route>
+          </Switch> */}
           <div className="footer">
               
               <div className="our-logo">
                   <div className="second-one">
-                 M<FcGlobe size=".75em"/>vie Tr<FcGlobe size=".75em"/>tter
+                 {/* M<FcGlobe size=".75em"/>vie Tr<FcGlobe size=".75em"/>tter */}
                  </div>
               </div>
               <div>

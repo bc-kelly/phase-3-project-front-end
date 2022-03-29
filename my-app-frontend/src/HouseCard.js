@@ -1,19 +1,20 @@
 import React, { useState } from 'react'
 
-function HouseCard ({movie, handleClickMovie}) {
+function HouseCard ({house, handleClickHouse}) {
     // const [className, setClassName] = useState(false);
 
 
 
-    function clickMovie(){
-        handleClickMovie(movie);
+    function clickHouse(){
+        handleClickHouse(house);
     }
     
     return (
-        <div className="house-card" onClick={clickMovie}>
-            <h3>{movie.name}</h3>
-            <p>{movie.location}</p>
-            <img src={movie.image} alt={movie.name} />
+        <div className="house-card" onClick={clickHouse}>
+            {/* <h3>{house.name}</h3> */}
+            <h3>{house.location}</h3>
+            <img src={house.image} alt={house.name} />
+            <p>{house.description}</p>
         </div>
     )
 }
