@@ -107,7 +107,7 @@ function AddAHouse({ handleAddHouse}) {
             onChange={handleChange}
           />
         </label>
-        <input type="submit" value="Submit" />
+        <input className="submit-btn" type="submit" value="Submit" />
         </form>
         </div>
     )

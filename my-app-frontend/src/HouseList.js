@@ -24,7 +24,7 @@ function HouseList({houses, handleClickHouse}) {
                 </div> 
             </h1>
             <h3 className="welcome-description">
-                Thanks for visiting Movie Trotter! Click on any movie below to add it to your <em>Travel Log,</em> or feel free to add in the details of your favorite movie in the <em>Add a Movie</em> section. 
+                Thanks for visiting <em>Air BnB But Betta!</em>
             </h3>
 
             <div className="houses-container">
