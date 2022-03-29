@@ -9,9 +9,10 @@ function NavBar() {
                     <NavLink exact to="/">Air BnB But Betta</NavLink>
                 </div>
                 <div>
-                    <NavLink activeStyle={{textDecoration:"underline"}} exact to="/">| Home |</NavLink>
+                    <NavLink activeStyle={{textDecoration:"underline"}} to="/houses">| Stays |</NavLink>
                     <NavLink activeStyle={{textDecoration:"underline"}} to="/addahouse">| Post a Stay |</NavLink>
-                    <NavLink activeStyle={{textDecoration:"underline"}} to="/travellist">| Post a Review |</NavLink>
+                    <NavLink activeStyle={{textDecoration:"underline"}} to="/travellist">| Reviews |</NavLink>
+                    <NavLink activeStyle={{textDecoration:"underline"}} to="/addareview">| Post a Review |</NavLink>
              </div>
             </div>
         </nav>

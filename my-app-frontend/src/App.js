@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import AddAHouse from "./AddAHouse";
+import AddAReview from "./AddAReview";
 import TravelList from "./TravelList";
 import HouseList from "./HouseList";
 import "./index.css";
@@ -9,6 +10,7 @@ import "./index.css";
 
 function App() {
     const [houses, setHouses] = useState([]);
+    const [reviews, setReviews] = useState([]);
     const [travel, setTravel] = useState ([]);
     const [newComment, setNewComment] = useState ('');
 
@@ -33,6 +35,10 @@ function App() {
 
     function handleAddHouse (newHouse) {
         setHouses([...houses, newHouse])
+    }
+
+    function handleAddReview (newReview) {
+        setReviews([...reviews, newReview])
     }
    
     // // //PATCH HERE WHEN USER CLICKS SAVE
@@ -60,9 +66,10 @@ function App() {
          <NavBar />
           <Routes>
 
-              <Route exact path ="/" element= { <HouseList houses={houses} handleClickHouse={handleClickHouse} /> } /> 
+              <Route path ="/houses" element= { <HouseList houses={houses} handleClickHouse={handleClickHouse} /> } /> 
               <Route path="/addahouse" element= { <AddAHouse houses={houses} setHouses={setHouses} handleAddHouse={handleAddHouse} />} />
-              <Route path="/travellist" element= { <TravelList travel={travel} newComment={newComment} />} />       
+              <Route path="/travellist" element= { <TravelList travel={travel} newComment={newComment} />} />
+              <Route path="/addareview" element= {<AddAReview handleAddReview={handleAddReview} houses={houses}/> } />       
 
           </Routes>
         

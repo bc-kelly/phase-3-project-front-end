@@ -18,7 +18,7 @@ function AddAHouse({ handleAddHouse}) {
     function handleSubmit(event) {
         event.preventDefault();
       
-        if(formData.name === "") {
+        if(formData.description === "") {
           setErrorMessage('Error! Complete All Fields');
           setFormData({
             description: "",

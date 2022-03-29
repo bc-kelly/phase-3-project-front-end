@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
-function AddAHouse({ handleAddHouse}) {
+
+function AddAReview({ handleAddReview, houses}) {
     const [errorMessage, setErrorMessage] = useState('');
     const [formData, setFormData] = useState ({
-        description: "",
-        image: "",
-        location: ""
+        content: "",
+        rating: "",
+        user_id: 1,
+        house_id: 1
     });
 
     function handleChange(event) {
@@ -18,55 +20,54 @@ function AddAHouse({ handleAddHouse}) {
     function handleSubmit(event) {
         event.preventDefault();
       
-        if(formData.name === "") {
+        if(formData.content === "") {
           setErrorMessage('Error! Complete All Fields');
           setFormData({
-            description: "",
-            image: "",
-            location: ""
+            content: "",
+            rating: "",
         })
-        } else if (formData.image === "") {
+        } else if (formData.rating === "") {
             setErrorMessage('Error! Complete All Fields');
             setFormData({
-                description: "",
-                image: "",
-                location: ""
+                content: "",
+                rating: "",
             })
-        } else if (formData.location === "") {
-            setErrorMessage('Error! Complete All Fields');
-            setFormData({
-                description: "",
-                image: "",
-                location: ""
-            })
+        // } else if (formData.location === "") {
+        //     setErrorMessage('Error! Complete All Fields');
+        //     setFormData({
+        //         content: "",
+        //         rating: "",
+        //     })
         } else {
             
-        fetch('http://localhost:9292/houses', {
+        fetch('http://localhost:9292/reviews', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            description: formData.description,
-            image: formData.image,
-            location: formData.location
+            content: formData.content,
+            rating: formData.rating,
+            user_id: formData.user_id,
+            house_id: formData.house_id
           }),
         })
         .then(resp => resp.json())
-        .then((newHouse) => handleAddHouse(newHouse))
+        .then((newReview) => handleAddReview(newReview))
 
         setFormData({
-            description: "",
-            image: "",
-            location: ""
+            content: "",
+            rating: "",
+            user_id: 1,
+            house_id: 1
         })
-        alert("Added to house list");
+        alert("Added to reviews list");
       }
     }
 
     return (
         <div className="add-a-house">
-          <h1 className="house-form-header">Add Your Own House</h1>
+          <h1 className="house-form-header">Add Your Own Review</h1>
           <h3 className="house-form-description">
             Add a review below! 
           </h3>
@@ -75,37 +76,46 @@ function AddAHouse({ handleAddHouse}) {
           )}
         <form className="house-form" onSubmit={handleSubmit}> 
             <label className="form-labels">
-            Description:
+            Content:
             <input
                 className="capitalize"
                 type="text"
-                name="description"
-                placeholder="Add Description..."
-                value={formData.description}
+                name="content"
+                placeholder="Add Review Content..."
+                value={formData.content}
                 onChange={handleChange}
             />
             </label>
             <label className="form-labels">
-            Image:
-            <input
-                className="capitalize"
-                type="text"
-                name="image"
-                placeholder="Add Location Image..."
-                value={formData.image}
+            Rating:
+            <select
+                type="integer"
+                name="house_id"
+                value={formData.rating}
                 onChange={handleChange}
-            />
+            >
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
             </label>
             <label className="form-labels">
-            Location:
-            <input
-                className="capitalize"
+            House:
+            <select 
                 type="text"
-                name="location"
-                placeholder="Add Location..."
-                value={formData.location}
+                name="rating"
+                value={formData.house_id}
                 onChange={handleChange}
-            />
+            >
+                {houses.map(house => (
+                    // console.log(house.location)
+                    <option key={house.id} value={house.id}>
+                        {house.location}
+                    </option>
+                ))}     
+            </select>
             </label>
             <input type="submit" value="Submit" />
         </form>
@@ -113,4 +123,4 @@ function AddAHouse({ handleAddHouse}) {
     )
 }
 
-export default AddAHouse
+export default AddAReview
