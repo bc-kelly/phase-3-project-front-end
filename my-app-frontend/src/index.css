@@ -2,6 +2,7 @@ nav.navbar a {
   padding: 10px;
   font-size: 20px;
   color: #f3f3f3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
 }
 
@@ -12,7 +13,7 @@ nav.navbar a {
 .navbar-header {
   text-align: center;
   justify-content: space-between;
-  background-color: #94abbd;
+  background-color: black;
   padding: 20px;
 }
 
@@ -25,11 +26,12 @@ nav.navbar a {
   max-width: 490px;
   height: 340px;
   padding: 5px;
-  border-radius: 25px;
+  border-radius: 2px;
 }
 
 .house-card h3, p {
   padding-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .house-card h3 {
@@ -37,11 +39,11 @@ nav.navbar a {
 }
 
 .house-card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   transition: 0.3s;
   width: 500px;
   background-color: #f3f3f3;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 .house-card-footer {
@@ -54,11 +56,20 @@ nav.navbar a {
 .houses-container .house-card {
   margin: 10px;
   cursor: pointer;
+  height: 410px;
+  overflow: hidden;
+}
+.houses-container .house-card img {
+  transition: transform .5s ease;
 }
 
-.houses-container .house-card:hover {
-  box-shadow: 0 10px 20px 16px rgba(0,0,0,.5);
+.houses-container .house-card:hover img {
+  transform: scale(1.5);
 }
+
+/* .houses-container .house-card:hover {
+  box-shadow: 0 10px 20px 16px rgba(0,0,0,.5);
+} */
 
 .houses-container {
   display: flex;
@@ -97,28 +108,68 @@ input[type=text], select {
   display: inline-block;
   border: inset rgb(0, 0, 120);
   border-width: 2px;
-  border-radius: 10px;
+  border-radius: 2px;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, arial, sans-serif;
 }
  
 input[type=submit] {
   width: 100%;
-  background-color: #556e84;
+  background-color: black;
   color: white;
   padding: 10px 15px;
   margin: 8px 0;
   border: none;
-  border-radius: 10px;
+  border-radius: 2px;
   cursor: pointer;
   font-size: large;
 }
 
 input[type=submit]:hover {
-  background-color: #3c83b3;
+  background-color: red;
+
 }
+
+.submit-btn {
+  transition: all 0.4s ease-in-out;
+}
+
+/* .submit-btn {
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+} */
+
+/* .submit-btn:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+
+.submit-btn:hover {
+  background-position: 0;
+ }
+
+ .submit-btn:hover::before {
+  width: 100%;
+} */
 
 .form-labels {
   font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .capitalize {
@@ -128,7 +179,7 @@ input[type=submit]:hover {
 textarea {
   border: none;
   resize: none;
-  background-color: #fef68a;
+  background-color: #f3f3f3;
 }
 
 textarea:focus {
@@ -136,32 +187,34 @@ textarea:focus {
 }
 
 .save {
-  background-color: #e1e1e1;
+  background-color: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 2px;
   padding: 5px 10px 5px 10px;
 }
 
 .save:hover {
-  background-color: #ededed;
+  background-color: black;
+  color: white;
   cursor: pointer;
 }
 
 .book {
-  background-color: #e1e1e1;
+  background-color: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 2px;
   padding: 5px 10px 5px 10px;
 }
 
 .book:hover {
-  background-color: #ededed;
+  background-color: black;
+  color: white;
   cursor: pointer;
 }
 
 .review {
-  background-color: #fef68a;
-  border-radius: 25px;
+  background-color: #f3f3f3;
+  border-radius: 2px;
   padding: 1rem;
   min-height: 170px;
   display: flex;
@@ -187,8 +240,8 @@ textarea:focus {
   padding: 10px;
   margin: 5px;
   border-style: solid;
-  border-color: rgb(0, 0, 120);
-  border-radius: 25px;
+  border-color: black;
+  border-radius: 2px;
 }
 
 .travel-container {
@@ -196,18 +249,18 @@ textarea:focus {
 }
 
 .favorite-icon {
-  color: blue;
+  color: red;
 }
 
 .App {
-  background-color: #94abbd;
+  background-color: #f5cc87;
   height: auto;
 
 }
 
 .travel-list, .add-a-house {
-  height: 500vh;
-  background-color: #94abbd;
+  height: 180vh;
+  background-color: #f5cc87;
 }
 
 * {
@@ -221,16 +274,18 @@ textarea:focus {
 
 .house-form-header, .travel-list-header {
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .welcome-description, .house-form-description, .travel-list-description {
   padding: 15px;
   padding-bottom: 35px;
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer {
-  background-color: #6f5a51;
+  background-color: black;
   padding: 20px;
   color: #f3f3f3;
   display: flex;
