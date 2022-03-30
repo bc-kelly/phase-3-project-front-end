@@ -24,7 +24,7 @@ function HouseList({houses, handleClickHouse}) {
                 </div> 
             </h1>
             <h3 className="welcome-description">
-                Thanks for visiting <em>Air BnB But Betta!</em>
+                Check out the lovely stays at <em>Air BnB But Betta!</em>
             </h3>
 
             <div className="houses-container">

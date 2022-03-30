@@ -36,9 +36,11 @@ function Reviews({ handleSaveClick, review, newComment}) {
                 <div className="favorite-icon" onClick={clickFavorite}>{"\u2606"}</div>
             </div>
             <div className='review-footer'>
-                <small>
-                    {/* {characterLimit - reviewText.length} Remaining */}
-                </small>
+            {/* <button className='save' 
+                // onClick={saveClick}
+                >
+                    Delete
+                </button> */}
                 <button className='save' 
                 onClick={saveClick}
                 >
