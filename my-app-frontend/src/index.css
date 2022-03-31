@@ -74,12 +74,23 @@
   font-size: 40px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
   text-align: center;
+  color: #7f4ee9
 }
 
 .hp-mountains {
-  max-width: 50px;
-  max-height: 50px;
+  /* size: 5em; */
+  color: #7f4ee9;
+  text-align: center;
 }
+
+.booking {
+  text-align: center;
+  font-size: 20px;
+}
+
+/* .lefty-call{
+  text-align: center;
+} */
 
 .house-list-header {
   text-align: center;
@@ -401,7 +412,7 @@ textarea:focus {
 }
 
 .footer {
-  /* background-color: black; */
+  background-color: #BAABDA;;
   padding: 20px;
   color: #f3f3f3;
   display: flex;
