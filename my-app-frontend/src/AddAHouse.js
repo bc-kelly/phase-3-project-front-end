@@ -68,7 +68,7 @@ function AddAHouse({ handleAddHouse}) {
         <div className="add-a-house">
           <h1 className="house-form-header">List your property</h1>
           <h3 className="house-form-description">
-            Add a stay below! 
+            Add details below 
           </h3>
           {errorMessage && (
             <p className="error"> {errorMessage} </p>

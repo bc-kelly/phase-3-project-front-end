@@ -5,8 +5,18 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  backdrop-filter: blur(10px); 
   /* filter: blur(8px) */
 }
+
+/* .hp-image {
+  background: url(https://www.pexels.com/photo/1287145/download/?search_query=&tracking_id=n0ja7c6z2v) no-repeat center top fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(10px);
+} */
 
 
 .flexbox-nav {
@@ -83,7 +93,7 @@ html {
 }
 
 .future {
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
   text-align: center;
   color: #7f4ee9
@@ -110,13 +120,13 @@ html {
 
 .booking {
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   color:#fff
 }
 
 .lefty-call {
   text-decoration: none;
-  color: #BAABDA
+  color: #7f4ee9
 }
 
 .lefty-call-div {
@@ -434,7 +444,7 @@ textarea:focus {
 }
 
 .travel-list, .add-a-house {
-  height: 180vh;
+  height: 100vh;
   /* background-image: url("https://wallpaperaccess.com/full/2441390.jpg"); */
   background-color: #D6E5FA;
 }
@@ -478,6 +488,8 @@ textarea:focus {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color:#775db1;
+  padding-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .welcome-description, .house-form-description, .travel-list-description {

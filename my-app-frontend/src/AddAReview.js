@@ -66,9 +66,9 @@ function AddAReview({ handleAddReview, houses, users }) {
 
     return (
         <div className="add-a-house">
-          <h1 className="house-form-header">Add Your Own Review</h1>
+          <h1 className="house-form-header">Review a Property</h1>
           <h3 className="house-form-description">
-            Add a review below! 
+            Tell other users about your stay! 
           </h3>
           {errorMessage && (
             <p className="error"> {errorMessage} </p>
