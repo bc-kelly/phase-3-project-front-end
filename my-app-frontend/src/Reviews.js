@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function Reviews({ handleSaveClick, review, newComment}) {
-    const [reviewText, setReviewText] = []
+function Reviews({review, newComment}) {
+    const [reviewText, setReviewText] = useState(review.content)
 	const characterLimit = 200;
 
 	function handleChange(event){
@@ -10,9 +10,18 @@ function Reviews({ handleSaveClick, review, newComment}) {
 		}
 	}
 
-	function saveClick() {
-        handleSaveClick(reviewText);
-	}
+    // //PATCH HERE WHEN USER CLICKS SAVE
+    function handleSaveClick() {
+        console.log("Updated review:", review)
+        fetch(`http://localhost:9292/reviews/${review.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({"content": reviewText})
+        })
+        review.content = reviewText
+    }
 
     function clickFavorite(event) {
         if (event.target.textContent === "\u2606") {
@@ -36,13 +45,8 @@ function Reviews({ handleSaveClick, review, newComment}) {
                 <div className="favorite-icon" onClick={clickFavorite}>{"\u2606"}</div>
             </div>
             <div className='review-footer'>
-            {/* <button className='save' 
-                // onClick={saveClick}
-                >
-                    Delete
-                </button> */}
                 <button className='save' 
-                onClick={saveClick}
+                onClick={() => handleSaveClick()}
                 >
                     Save
                 </button>

@@ -2,8 +2,8 @@ import React from "react";
 import HouseCard from './HouseCard'
 import Reviews from "./Reviews";
 
-function TravelList({travel, handleSaveClick, newComment}) {
-    const showReviews = travel.map((review) => {
+function TravelList({reviews, newComment}) {
+    const showReviews = reviews.map((review) => {
         // console.log(review)
         return (
             <div key={review.id} className="travel-card-container">
@@ -11,7 +11,7 @@ function TravelList({travel, handleSaveClick, newComment}) {
                     house={review.house}
                     className="house-cards"
                 />
-                <Reviews handleSaveClick={handleSaveClick} review={review} newComment={newComment}/>
+                <Reviews review={review} newComment={newComment}/>
             </div>
         )
     })

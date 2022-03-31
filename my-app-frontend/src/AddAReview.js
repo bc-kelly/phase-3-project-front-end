@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-
-function AddAReview({ handleAddReview, houses}) {
+function AddAReview({ handleAddReview, houses, users }) {
     const [errorMessage, setErrorMessage] = useState('');
     const [formData, setFormData] = useState ({
         content: "",
@@ -90,29 +89,49 @@ function AddAReview({ handleAddReview, houses}) {
             Rating:
             <select
                 type="integer"
-                name="house_id"
+                name="rating"
                 value={formData.rating}
                 onChange={handleChange}
             >
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="0"> Select a Rating </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+
             </select>
             </label>
             <label className="form-labels">
             House:
             <select 
                 type="text"
-                name="rating"
+                name="house_id"
                 value={formData.house_id}
                 onChange={handleChange}
             >
+                <option> Select a House </option>
                 {houses.map(house => (
                     // console.log(house.location)
                     <option key={house.id} value={house.id}>
                         {house.location}
+                    </option>
+                ))}     
+            </select>
+            </label>
+            <label className="form-labels">
+            User:
+            <select 
+                type="text"
+                name="user_id"
+                value={formData.user_id}
+                onChange={handleChange}
+            >
+                <option> Select User </option>
+                {users.map(user => (
+                    // console.log("User:", user)
+                    <option key={user.id} value={user.id}>
+                        {user.username}
                     </option>
                 ))}     
             </select>

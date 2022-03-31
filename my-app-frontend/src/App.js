@@ -11,8 +11,9 @@ import "./index.css";
 function App() {
     const [houses, setHouses] = useState([]);
     const [reviews, setReviews] = useState([]);
-    const [travel, setTravel] = useState ([]);
-    const [newComment, setNewComment] = useState ('');
+    // const [travel, setTravel] = useState ([]);
+    const [users, setUsers] = useState ([]);
+    // const [newComment, setNewComment] = useState ('');
 
     useEffect (() => {
         fetch('http://localhost:9292/houses')
@@ -28,7 +29,16 @@ function App() {
         .then(resp => resp.json())
         .then(reviewData => {
             console.log(reviewData);
-            setTravel(reviewData);
+            setReviews(reviewData);
+        })
+    }, []);
+
+    useEffect (() => {
+        fetch('http://localhost:9292/users')
+        .then(resp => resp.json())
+        .then(userData => {
+            console.log("User Data:", userData);
+            setUsers(userData)
         })
     }, []);
 
@@ -38,38 +48,26 @@ function App() {
     }
 
     function handleAddReview (newReview) {
+        // console.log("this is new review:", newReview)
         setReviews([...reviews, newReview])
     }
    
-    // // //PATCH HERE WHEN USER CLICKS SAVE
-    // function handleSaveClick(updatedMovie, savedComment) {
-    //     console.log(updatedMovie)
-    //     fetch(`http://localhost:3000/houses/${updatedMovie.id}`, {
-    //         method: "PATCH",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({"comment": savedComment})
-    //     })
-    //             updatedMovie.comment = savedComment;
-    //             // setNewComment(savedComment)
-    // }
 
-    function handleClickHouse(clickedHouse) {
-        if (!travel.includes(clickedHouse)) {
-        setTravel([...travel, clickedHouse]);
-        }
-    }
+    // function handleClickHouse(clickedHouse) {
+    //     if (!reviews.includes(clickedHouse)) {
+    //     setReviews([...reviews, clickedHouse]);
+    //     }
+    // }
     
   return (
       <div className="App">
          <NavBar />
           <Routes>
 
-              <Route path ="/houses" element= { <HouseList houses={houses} handleClickHouse={handleClickHouse} /> } /> 
+              <Route path ="/houses" element= { <HouseList houses={houses} /> } /> 
               <Route path="/addahouse" element= { <AddAHouse houses={houses} setHouses={setHouses} handleAddHouse={handleAddHouse} />} />
-              <Route path="/travellist" element= { <TravelList travel={travel} newComment={newComment} />} />
-              <Route path="/addareview" element= {<AddAReview handleAddReview={handleAddReview} houses={houses}/> } />       
+              <Route path="/travellist" element= { <TravelList reviews={reviews} />} />
+              <Route path="/addareview" element= {<AddAReview handleAddReview={handleAddReview} houses={houses} users={users} /> } />       
 
           </Routes>
         
@@ -86,7 +84,7 @@ function App() {
                     <a href="https://www.linkedin.com/in/bridget-kelly-594009127/" target="_blank"> Bridget Kelly </a>
                 </li>
                 <li className="list-item">
-                    <a href="https://www.linkedin.com/in/miguel-nazario"target="_blank">   Miguel Nazario</a>
+                    <a href="https://www.linkedin.com/in/matt-mckay-cpa-a2447a116" target="_blank"> Matt McKay </a>
                 </li>
               </div>
               

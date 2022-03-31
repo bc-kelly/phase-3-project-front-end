@@ -290,17 +290,18 @@ textarea:focus {
 
 .favorite-icon {
   color: rgb(255, 0, 255);
+  margin-left: 5px;
 }
 
 .App {
   /* background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-s70-ae-3079a_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=5967d2705f73753956142c8603dd21a4"); */
   /* background-image: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?cs=srgb&dl=pexels-veeterzy-114979.jpg&fm=jpg"); */
   /* background-image: url("https://celclipmaterialprod.s3-ap-northeast-1.amazonaws.com/35/22/1812235/example"); */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
   background-size: cover;
   /* background-color: #D6E5FA; */
   /* background-color: #f5cc87; */
-  height: aureto;
+  /* height: aureto; */
 
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom"
 import { GiMountains } from "react-icons/gi";
-import { FaMountain } from "react-icons/fa";
+// import { FaMountain } from "react-icons/fa";
 
 
 function NavBar() {
@@ -15,7 +15,7 @@ function NavBar() {
 
                 </div>
                 <div className="navbar-links">
-                    <NavLink exact to="/">Home</NavLink>
+                    <NavLink exact to="/">HOME</NavLink>
                     <NavLink activeStyle={{textDecoration:"underline"}} to="/houses">STAYS</NavLink>
                     <NavLink activeStyle={{textDecoration:"underline"}} to="/addahouse"> POST A STAY </NavLink>
                     <NavLink activeStyle={{textDecoration:"underline"}} to="/travellist"> REVIEWS </NavLink>
