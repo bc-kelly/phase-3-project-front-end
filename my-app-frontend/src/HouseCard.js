@@ -18,7 +18,7 @@ function HouseCard ({house, handleClickHouse}) {
             </div>
             <p>{house.description}</p>
             <div className='house-card-footer'> 
-                <button className='save'>
+                <button className='post'>
                     <a href="http://localhost:3000/travellist">Post a Review</a>
                 </button>
                 <button className='book'>

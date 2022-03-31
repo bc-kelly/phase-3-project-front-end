@@ -39,9 +39,9 @@ function TravelList({reviews, newComment}) {
             <h3 className="travel-list-description">
                 Check out the reviews... 
             </h3>
-
-            <input onChange={handleSearchText} value={searchText} id="search" type="text" placeholder="Search..."></input>
-
+            <div className="travel-list-search-div">
+            <   input className="travel-list-search" onChange={handleSearchText} value={searchText} id="search" type="text" placeholder="Search..."></input>
+            </div>
             <div className="travel-container">
                 {showReviews}
             </div>
