@@ -62,6 +62,7 @@ function AddAReview({ handleAddReview, houses, users }) {
         })
         alert("Added to reviews list");
       }
+      event.target.reset();
     }
 
     return (

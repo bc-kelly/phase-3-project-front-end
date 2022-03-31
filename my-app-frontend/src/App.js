@@ -5,6 +5,7 @@ import AddAHouse from "./AddAHouse";
 import AddAReview from "./AddAReview";
 import TravelList from "./TravelList";
 import HouseList from "./HouseList";
+import Home from "./Home"
 import "./index.css";
 // import { FcGlobe } from "react-icons/fc";
 
@@ -63,11 +64,11 @@ function App() {
       <div className="App">
          <NavBar />
           <Routes>
-
-              <Route path ="/houses" element= { <HouseList houses={houses} /> } /> 
-              <Route path="/addahouse" element= { <AddAHouse houses={houses} setHouses={setHouses} handleAddHouse={handleAddHouse} />} />
-              <Route path="/travellist" element= { <TravelList reviews={reviews} />} />
-              <Route path="/addareview" element= {<AddAReview handleAddReview={handleAddReview} houses={houses} users={users} /> } />       
+                <Route exact path ="/" element= { <Home /> } /> 
+                <Route path ="/houses" element= { <HouseList houses={houses} /> } /> 
+                <Route path="/addahouse" element= { <AddAHouse houses={houses} setHouses={setHouses} handleAddHouse={handleAddHouse} />} />
+                <Route path="/travellist" element= { <TravelList reviews={reviews} />} />
+                <Route path="/addareview" element= {<AddAReview handleAddReview={handleAddReview} houses={houses} users={users} /> } />       
 
           </Routes>
         

@@ -73,42 +73,42 @@ function AddAHouse({ handleAddHouse}) {
           {errorMessage && (
             <p className="error"> {errorMessage} </p>
           )}
-        <form className="house-form" onSubmit={handleSubmit}> 
-        <label className="form-labels">
-          Description:
-          <input
-            className="capitalize"
-            type="text"
-            name="description"
-            placeholder="Add Description..."
-            value={formData.description}
-            onChange={handleChange}
-          />
-        </label>
-        <label className="form-labels">
-          Image:
-          <input
-            className="capitalize"
-            type="text"
-            name="image"
-            placeholder="Add Location Image..."
-            value={formData.image}
-            onChange={handleChange}
-          />
-        </label>
-        <label className="form-labels">
-          Location:
-          <input
-            className="capitalize"
-            type="text"
-            name="location"
-            placeholder="Add Location..."
-            value={formData.location}
-            onChange={handleChange}
-          />
-        </label>
-        <input className="submit-btn" type="submit" value="Submit" />
-        </form>
+          <form className="house-form" onSubmit={handleSubmit}> 
+              <label className="form-labels">
+                Description:
+                <input
+                  className="capitalize"
+                  type="text"
+                  name="description"
+                  placeholder="Add Description..."
+                  value={formData.description}
+                  onChange={handleChange}
+                />
+              </label>
+            <label className="form-labels">
+              Image:
+              <input
+                className="capitalize"
+                type="text"
+                name="image"
+                placeholder="Add Location Image..."
+                value={formData.image}
+                onChange={handleChange}
+              />
+            </label>
+            <label className="form-labels">
+              Location:
+              <input
+                className="capitalize"
+                type="text"
+                name="location"
+                placeholder="Add Location..."
+                value={formData.location}
+                onChange={handleChange}
+              />
+            </label>
+            <input className="submit-btn" type="submit" value="Submit" />
+          </form>
         </div>
     )
 }

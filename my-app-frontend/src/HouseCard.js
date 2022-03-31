@@ -13,14 +13,16 @@ function HouseCard ({house, handleClickHouse}) {
         <div className="house-card" onClick={clickHouse}>
             {/* <h3>{house.name}</h3> */}
             <h3>{house.location}</h3>
-            <img src={house.image} alt={house.name} />
+            <div className="picture" >
+                <img src={house.image} alt={house.name} />
+            </div>
             <p>{house.description}</p>
             <div className='house-card-footer'> 
                 <button className='save'>
-                    Add review
+                    <a href="http://localhost:3000/travellist">Post a Review</a>
                 </button>
                 <button className='book'>
-                    Book
+                    <a href="http://localhost:3000/">Book</a>
                 </button>
             </div>
         </div>

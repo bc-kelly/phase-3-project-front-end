@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import HouseCard from './HouseCard'
 import Reviews from "./Reviews";
 
 function TravelList({reviews, newComment}) {
-    const showReviews = reviews.map((review) => {
+    const [searchText, setSearchText] = useState("")
+
+    const filterAllReviews = reviews.filter(function (review){
+        return review.house.location.toLowerCase().includes(searchText.toLowerCase()) 
+        || review.content.toLowerCase().includes(searchText.toLowerCase())
+        || review.house.description.toLowerCase().includes(searchText.toLowerCase())
+      })
+
+
+    function handleSearchText (event) {
+        console.log(event.target.value)
+        setSearchText(event.target.value)
+    }
+
+    const showReviews = filterAllReviews.map((review) => {
         // console.log(review)
         return (
             <div key={review.id} className="travel-card-container">
@@ -15,12 +29,19 @@ function TravelList({reviews, newComment}) {
             </div>
         )
     })
+
+    
+    
+
     return (
         <div className="travel-list">
             <h1 className="travel-list-header">Reviews</h1>
             <h3 className="travel-list-description">
                 Check out the reviews... 
             </h3>
+
+            <input onChange={handleSearchText} value={searchText} id="search" type="text" placeholder="Search..."></input>
+
             <div className="travel-container">
                 {showReviews}
             </div>

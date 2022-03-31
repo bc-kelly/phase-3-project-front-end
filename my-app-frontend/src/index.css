@@ -1,5 +1,13 @@
+.flexbox-nav {
+  display: flex;
+  /* position: fixed; */
+  flex-direction: row;
+  justify-content: space-evenly;  
+  size: 30vh;
+}
+
 .navbar-links a {
-  padding: 0px 100px 0px 100px;
+  padding: 0px 10vh 0px 10vh;
   font-size: 20px;
   color: #f3f3f3;
   font-family: sans-serif;
@@ -45,12 +53,32 @@
   text-align: center;
   justify-content: space-between;
   background-image: url("https://wallpaperaccess.com/full/1089679.png");
+  background-size: 100%;
   /* background-size: 50px 50px 50px 50px; */
   /* background-color: #ffdae0; */
   background-position: center center;
   background-repeat: no-repeat;
   padding: 70px;
+  width: 100%;
 
+}
+
+.home-page {
+  font-size: 60px;
+  color: #BAABDA;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  text-align: center;
+}
+
+.future {
+  font-size: 40px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  text-align: center;
+}
+
+.hp-mountains {
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .house-list-header {
@@ -63,7 +91,13 @@
   height: 340px;
   padding: 5px;
   border-radius: 20px;
+  object-fit: cover;
 }
+
+/* .picture {
+  max-width: 490px;
+  height: 340px;
+} */
 
 .house-card h3, p {
   padding-left: 20px;
@@ -72,6 +106,10 @@
 
 .house-card h3 {
   padding-top: 5px;
+}
+
+.house-card p {
+  padding-top: 10px;
 }
 
 .house-card {
@@ -90,21 +128,28 @@
   align-items: center;
   justify-content: space-between;
   margin: 10px;
+
 }
+
+.travel-container .house-card-footer{
+  margin-top: 30px;
+  position: relative;
+}
+
 
 .houses-container .house-card {
   margin: 10px;
   cursor: pointer;
-  height: 410px;
+  height: 460px;
   overflow: hidden;
 }
 .houses-container .house-card img {
   transition: transform .5s ease;
 }
 
-.houses-container .house-card:hover img {
+/* .houses-container .house-card:hover img {
   transform: scale(1.5);
-}
+} */
 
 /* .houses-container .house-card:hover {
   box-shadow: 0 10px 20px 16px rgba(0,0,0,.5);
@@ -117,6 +162,7 @@
   flex-wrap: wrap;
   columns: 2;
   padding-bottom: 30px;
+  width: 100%;
 }
 
 .travel-container {
@@ -220,6 +266,7 @@ textarea {
   border: none;
   resize: none;
   background-color: #f3f3f3;
+  height: 250px;
 }
 
 textarea:focus {
@@ -233,6 +280,10 @@ textarea:focus {
   padding: 5px 10px 5px 10px;
 }
 
+.save a {
+  text-decoration: none;
+}
+
 .save:hover {
   background-color: black;
   color: white;
@@ -244,6 +295,11 @@ textarea:focus {
   border: none;
   border-radius: 25px;
   padding: 5px 10px 5px 10px;
+  /* margin: 10px */
+}
+
+.book a {
+  text-decoration: none;
 }
 
 .book:hover {
@@ -270,8 +326,9 @@ textarea:focus {
 
 .review-footer {
   /* display: flex; */
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  margin: 0 auto;
 }
 
 .travel-card-container {
@@ -289,8 +346,11 @@ textarea:focus {
 }
 
 .favorite-icon {
-  color: rgb(255, 0, 255);
-  margin-left: 5px;
+  color: hotpink;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  /* margin-left: 5px; */
 }
 
 .App {

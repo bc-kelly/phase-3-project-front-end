@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { GiMountains } from "react-icons/gi";
 
 function Reviews({review, newComment}) {
     const [reviewText, setReviewText] = useState(review.content)
@@ -42,8 +43,8 @@ function Reviews({review, newComment}) {
                     onChange={handleChange}
                 >{review.content}
                 </textarea>
-                <div className="favorite-icon" onClick={clickFavorite}>{"\u2606"}</div>
             </div>
+           <div className="favorite-icon"> Panda Rating: {"🐼".repeat(review.rating)} </div>
             <div className='review-footer'>
                 <button className='save' 
                 onClick={() => handleSaveClick()}
