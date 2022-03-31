@@ -1,3 +1,5 @@
+/* body { min-height: 100vh; } */
+
 .flexbox-nav {
   display: flex;
   /* position: fixed; */
@@ -68,6 +70,7 @@
   color: #BAABDA;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
   text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1418290368169-1c94e6683532?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c25vd3klMjBtb3VudGFpbnxlbnwwfHwwfHw%3D&w=1000&q=80") no-repeat center center fixed;
 }
 
 .future {
@@ -83,14 +86,25 @@
   text-align: center;
 }
 
+.hp-image {
+  background-image: url("https://images.unsplash.com/photo-1418290368169-1c94e6683532?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c25vd3klMjBtb3VudGFpbnxlbnwwfHwwfHw%3D&w=1000&q=80") no-repeat center center fixed;
+  /* filter: blur(3px) */
+}
+
 .booking {
   text-align: center;
   font-size: 20px;
 }
 
-/* .lefty-call{
-  text-align: center;
-} */
+.lefty-call {
+  text-decoration: none;
+  color: #7f4ee9;
+}
+
+.lefty-call-div {
+  justify-content: center;
+  display: flex;
+}
 
 .house-list-header {
   text-align: center;
@@ -228,7 +242,7 @@ input[type=submit]:hover {
 }
 
 .submit-btn {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* .submit-btn {
@@ -376,6 +390,10 @@ textarea:focus {
 
 }
 
+/* .travel-container {
+  height: auto;
+} */
+
 .travel-list, .add-a-house {
   height: 180vh;
   /* background-image: url("https://wallpaperaccess.com/full/2441390.jpg"); */
@@ -391,6 +409,10 @@ textarea:focus {
 * {
   margin: 0;
   padding: 0;
+}
+
+.travel-list {
+  min-height: 300vh;
 }
 
 .house-form {
@@ -427,7 +449,7 @@ textarea:focus {
 .our-logo {
   display: flex;
   align-items: center;
-  font-size: 30px
+  font-size: 20px
 }
 
 .list-item {

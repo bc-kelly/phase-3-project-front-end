@@ -5,8 +5,8 @@ function AddAReview({ handleAddReview, houses, users }) {
     const [formData, setFormData] = useState ({
         content: "",
         rating: "",
-        user_id: 1,
-        house_id: 1
+        user_id: "",
+        house_id: ""
     });
 
     function handleChange(event) {
@@ -62,7 +62,6 @@ function AddAReview({ handleAddReview, houses, users }) {
         })
         alert("Added to reviews list");
       }
-      event.target.reset();
     }
 
     return (
@@ -137,7 +136,7 @@ function AddAReview({ handleAddReview, houses, users }) {
                 ))}     
             </select>
             </label>
-            <input type="submit" value="Submit" />
+            <input className="submit-btn" type="submit" value="Submit" />
         </form>
     </div>
     )

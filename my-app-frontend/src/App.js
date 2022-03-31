@@ -7,6 +7,12 @@ import TravelList from "./TravelList";
 import HouseList from "./HouseList";
 import Home from "./Home"
 import "./index.css";
+import { GiMountains } from "react-icons/gi";
+import { AiOutlineCopyrightCircle } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+
+
+
 // import { FcGlobe } from "react-icons/fc";
 
 function App() {
@@ -75,17 +81,19 @@ function App() {
           <div className="footer">
               
               <div className="our-logo">
+              <AiOutlineCopyrightCircle size=".75em"/> 2022 Air BnB But Betta, Inc. All rights reserved.
                   <div className="second-one">
-                 {/* M<FcGlobe size=".75em"/>vie Tr<FcGlobe size=".75em"/>tter */}
+                  {/* <h3> <GiMountains /> <GiMountains /> <GiMountains /> </h3> */}
+                 {/* <AiOutlineTrademarkCircle size=".75em"/> */}
                  </div>
               </div>
               <div>
                 Find us on LinkedIn: 
                 <li className="list-item">
-                    <a href="https://www.linkedin.com/in/bridget-kelly-594009127/" target="_blank"> Bridget Kelly </a>
+                    <a href="https://www.linkedin.com/in/bridget-kelly-594009127/" target="_blank"> <AiFillLinkedin /> Bridget Kelly</a>
                 </li>
                 <li className="list-item">
-                    <a href="https://www.linkedin.com/in/matt-mckay-cpa-a2447a116" target="_blank"> Matt McKay </a>
+                    <a href="https://www.linkedin.com/in/matt-mckay-cpa-a2447a116" target="_blank"> <AiFillLinkedin /> Matt McKay </a>
                 </li>
               </div>
               
