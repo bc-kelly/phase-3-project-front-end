@@ -3,9 +3,9 @@ import { GiMountains } from "react-icons/gi";
 
 function Home() {
     return ( 
-        <div>
-            <div className="hp-image"></div>
-            <div>
+        <div >
+            <div ></div>
+            <div className="hp-image">
                 <h1 className="home-page">Welcome to AirBnB But Betta</h1>
                 <h3 className="hp-mountains"> <GiMountains size={100}/> <GiMountains size={100}/> <GiMountains size={100}/> </h3>
                 <p className="future"> The future of stays</p>

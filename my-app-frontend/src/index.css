@@ -70,7 +70,7 @@
   color: #BAABDA;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1418290368169-1c94e6683532?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c25vd3klMjBtb3VudGFpbnxlbnwwfHwwfHw%3D&w=1000&q=80") no-repeat center center fixed;
+  /* background-image: url("https://www.pexels.com/photo/1287145/download/?search_query=&tracking_id=n0ja7c6z2v"); */
 }
 
 .future {
@@ -87,7 +87,11 @@
 }
 
 .hp-image {
-  background-image: url("https://images.unsplash.com/photo-1418290368169-1c94e6683532?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c25vd3klMjBtb3VudGFpbnxlbnwwfHwwfHw%3D&w=1000&q=80") no-repeat center center fixed;
+  background-image: url("https://www.pexels.com/photo/1287145/download/?search_query=&tracking_id=n0ja7c6z2v");
+  height: 100vh;
+  width: 100%;
+  /* background-position: center center; */
+  /* filter: blur(4px); */
   /* filter: blur(3px) */
 }
 
