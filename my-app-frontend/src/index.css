@@ -443,6 +443,10 @@ textarea:focus {
   background-color:#fff
 }
 
+.house-list-list input[type=text], select {
+  width: 50%
+}
+
 .travel-list, .add-a-house {
   height: 100vh;
   /* background-image: url("https://wallpaperaccess.com/full/2441390.jpg"); */
