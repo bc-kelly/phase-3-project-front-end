@@ -200,9 +200,9 @@ html {
   transition: transform .5s ease;
 }
 
-/* .houses-container .house-card:hover img {
+.houses-container .house-card:hover img {
   transform: scale(1.5);
-} */
+}
 
 /* .houses-container .house-card:hover {
   box-shadow: 0 10px 20px 16px rgba(0,0,0,.5);
