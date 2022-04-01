@@ -447,6 +447,10 @@ textarea:focus {
   width: 50%
 }
 
+.house-form input[type=text], select {
+  width: 100%;
+}
+
 .travel-list, .add-a-house {
   height: 100vh;
   /* background-image: url("https://wallpaperaccess.com/full/2441390.jpg"); */
