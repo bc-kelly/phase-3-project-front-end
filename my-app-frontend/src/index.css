@@ -85,7 +85,7 @@ html {
 }
 
 .home-page {
-  font-size: 60px;
+  font-size: 70px;
   color: #BAABDA;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
   text-align: center;
@@ -93,7 +93,7 @@ html {
 }
 
 .future {
-  font-size: 50px;
+  font-size: 60px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
   text-align: center;
   color: #7f4ee9
@@ -120,13 +120,14 @@ html {
 
 .booking {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   color:#fff
 }
 
 .lefty-call {
   text-decoration: none;
-  color: #7f4ee9
+  color: #7f4ee9;
+  font-size: 20px;
 }
 
 .lefty-call-div {
@@ -201,7 +202,7 @@ html {
 }
 
 .houses-container .house-card:hover img {
-  transform: scale(1.5);
+  transform: scale(1.25);
 }
 
 /* .houses-container .house-card:hover {
@@ -407,7 +408,7 @@ textarea:focus {
   padding: 10px;
   margin: 5px;
   border-style: solid;
-  border-color: #775db1;
+  border-color: #b947e6;
   border-radius: 25px;
 }
 
