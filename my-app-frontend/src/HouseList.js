@@ -35,7 +35,7 @@ function HouseList({houses, handleClickHouse}) {
                 </div> 
             </h1>
             <h3 className="welcome-description">
-                Check out the lovely stays at <em>Air BnB But Betta!</em>
+                Check out the lovely stays at <em>Retro BnB</em>
             </h3>
             <div className="travel-list-search-div">
             <   input className="travel-list-search" onChange={handleSearchText} value={searchText} id="search" type="text" placeholder="Search..."></input>

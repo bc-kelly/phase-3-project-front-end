@@ -28,8 +28,8 @@ html {
 }
 
 .navbar-links a {
-  padding: 0px 10vh 0px 10vh;
-  font-size: 20px;
+  padding: 0px 5vh 0px 5vh;
+  font-size: 2vh;
   color: #f3f3f3;
   font-family: sans-serif;
   text-decoration: none;
@@ -38,9 +38,10 @@ html {
   transform: translatey(-100%);
 	/* padding: 1em 0.5em 1em 1em; */
 	background: #BAABDA;
-	border-radius: 10em 10em 10em 10em;
+	border-radius: 1em 1em 1em 1em;
 	box-shadow: -10px 0px 0px hotpink;
 	transition: all 300ms ease;
+  /* width: 50%; */
 }
 
 .navbar-links a:hover {
@@ -121,7 +122,8 @@ html {
 .booking {
   text-align: center;
   font-size: 40px;
-  color:#fff
+  color:#fff;
+  font-family: sans-serif;
 }
 
 .lefty-call {

@@ -81,7 +81,7 @@ function App() {
           <div className="footer">
               
               <div className="our-logo">
-              <AiOutlineCopyrightCircle size=".75em"/> 2022 Air BnB But Betta, Inc. All rights reserved.
+              <AiOutlineCopyrightCircle size=".75em"/> 2022 Retro BnB, Inc. All rights reserved.
                   <div className="second-one">
                   {/* <h3> <GiMountains /> <GiMountains /> <GiMountains /> </h3> */}
                  {/* <AiOutlineTrademarkCircle size=".75em"/> */}

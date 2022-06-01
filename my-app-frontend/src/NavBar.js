@@ -10,7 +10,7 @@ function NavBar() {
             <nav className="navbar">
                     <div className="navbar-header">
                         <div className="navbar-homepage">
-                            <h1> Air BnB But Betta </h1>
+                            <h1> Retro BnB </h1>
                             {/* <h3> <FaMountain /> <FaMountain /> <FaMountain /> </h3> */}
                             <h3> <GiMountains /> <GiMountains /> <GiMountains /> </h3>
 
