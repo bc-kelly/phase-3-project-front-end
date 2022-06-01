@@ -41,7 +41,7 @@ function AddAHouse({ handleAddHouse}) {
             })
         } else {
             
-        fetch('http://localhost:9292/houses', {
+        fetch('https://hotelproject-backend.herokuapp.com/houses', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

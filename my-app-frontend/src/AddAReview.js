@@ -39,7 +39,7 @@ function AddAReview({ handleAddReview, houses, users }) {
         //     })
         } else {
             
-        fetch('http://localhost:9292/reviews', {
+        fetch('https://hotelproject-backend.herokuapp.com/reviews', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -23,7 +23,7 @@ function App() {
     // const [newComment, setNewComment] = useState ('');
 
     useEffect (() => {
-        fetch('http://localhost:9292/houses')
+        fetch('https://hotelproject-backend.herokuapp.com/houses')
         .then(resp => resp.json())
         .then(houseData => {
             setHouses(houseData);
@@ -32,7 +32,7 @@ function App() {
 
 
     useEffect (() => {
-        fetch('http://localhost:9292/reviews')
+        fetch('https://hotelproject-backend.herokuapp.com/reviews')
         .then(resp => resp.json())
         .then(reviewData => {
             console.log(reviewData);
@@ -41,7 +41,7 @@ function App() {
     }, []);
 
     useEffect (() => {
-        fetch('http://localhost:9292/users')
+        fetch('https://hotelproject-backend.herokuapp.com/users')
         .then(resp => resp.json())
         .then(userData => {
             console.log("User Data:", userData);

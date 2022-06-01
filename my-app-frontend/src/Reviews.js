@@ -14,7 +14,7 @@ function Reviews({review, newComment}) {
     // //PATCH HERE WHEN USER CLICKS SAVE
     function handleSaveClick() {
         console.log("Updated review:", review)
-        fetch(`http://localhost:9292/reviews/${review.id}`, {
+        fetch(`https://hotelproject-backend.herokuapp.com/reviews/${review.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

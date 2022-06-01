@@ -19,10 +19,10 @@ function HouseCard ({house, handleClickHouse}) {
             <p>{house.description}</p>
             <div className='house-card-footer'> 
                 <button className='post'>
-                    <a href="http://localhost:3000/addareview">Post a Review</a>
+                    <a href="https://hotelproject-react.netlify.app/addareview">Post a Review</a>
                 </button>
                 <button className='book'>
-                    <a href="http://localhost:3000/">Book</a>
+                    <a href="https://hotelproject-react.netlify.app/">Book</a>
                 </button>
             </div>
         </div>
