@@ -34,7 +34,7 @@ function TravelList({reviews, newComment}) {
     
 
     return (
-        <div className="travel-list">
+        <div className="house-list-list">
             <h1 className="travel-list-header">Reviews</h1>
             <h3 className="travel-list-description">
                 Check out the reviews... 
