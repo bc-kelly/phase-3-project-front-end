@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { NavLink } from "react-router-dom"
+
 
 function HouseCard ({house, handleClickHouse}) {
     // const [className, setClassName] = useState(false);
@@ -19,7 +21,8 @@ function HouseCard ({house, handleClickHouse}) {
             <p>{house.description}</p>
             <div className='house-card-footer'> 
                 <button className='post'>
-                    <a href="/addareview">Post a Review</a>
+                <NavLink activeStyle={{textDecoration:"underline"}} to="/addareview"> Post a Review </NavLink>
+                    {/* <a href="/addareview">Post a Review</a> */}
                 </button>
                 <button className='book'>
                     <a href="https://hotelproject-react.netlify.app/">Book</a>
