@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function AddAReview({ handleAddReview, houses, users }) {
     const [errorMessage, setErrorMessage] = useState('');
@@ -8,6 +9,7 @@ function AddAReview({ handleAddReview, houses, users }) {
         user_id: "",
         house_id: ""
     });
+    const navigate = useNavigate();
 
     function handleChange(event) {
         setFormData({
@@ -61,6 +63,8 @@ function AddAReview({ handleAddReview, houses, users }) {
             house_id: 1
         })
         alert("Added to reviews list");
+        navigate('/')
+        window.location.replace('/')
       }
     }
 
