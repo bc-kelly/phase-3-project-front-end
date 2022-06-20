@@ -5,14 +5,16 @@ import { GiMountains } from "react-icons/gi";
 
 
 function NavBar() {
+    const style = { fontSize: "3vw" }
+
     return (
         
             <nav className="navbar">
                     <div className="navbar-header">
                         <div className="navbar-homepage">
-                            <h1> Retro BnB </h1>
+                            <h1 className="header-welcome"> Retro BnB </h1>
                             {/* <h3> <FaMountain /> <FaMountain /> <FaMountain /> </h3> */}
-                            <h3> <GiMountains /> <GiMountains /> <GiMountains /> </h3>
+                            <h3> <GiMountains style={style}/> <GiMountains style={style}/> <GiMountains style={style}/> </h3>
 
                         </div>
                         <div className="flexbox-nav">

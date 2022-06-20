@@ -71,6 +71,10 @@ html {
   text-decoration: underline;
 }
 
+.header-welcome{
+  font-size: 4.5vw;
+}
+
 .navbar-header {
   text-align: center;
   justify-content: space-between;
@@ -86,19 +90,31 @@ html {
 }
 
 .home-page {
-  font-size: 10vh;
-  color: #BAABDA;
+  /* padding-top: 3vh; */
+  font-size: 3.5vw;
+  color: #7f4ee9;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
   text-align: center;
   /* background-image: url("https://www.pexels.com/photo/1287145/download/?search_query=&tracking_id=n0ja7c6z2v"); */
 }
 
 .future {
-  font-size: 8vh;
+  font-size: 3vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
   text-align: center;
-  color: #7f4ee9
+  color: #BAABDA;
+  animation: glow 2s ease-in-out infinite alternate;
 }
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #ff1361;
+    color: palevioletred
+  }
+  to {
+    text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+    color:#775db1
+}}
 
 .hp-mountains {
   /* size: 200vh; */
@@ -121,7 +137,7 @@ html {
 
 .booking {
   text-align: center;
-  font-size: 6vh;
+  font-size: 2.5vw;
   color:#fff;
   font-family: sans-serif;
 }
@@ -392,6 +408,7 @@ textarea:focus {
   flex-direction: column;
   justify-content: space-between;
   white-space: pre-wrap;
+  
 }
 
 .review-header {
